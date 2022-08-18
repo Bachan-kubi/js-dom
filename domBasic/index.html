@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Events</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to DOM Events</h1>
+        <!-- option One -->
+        <button onclick="console.log(7)">Click me</button>
+        <button onclick="console.log('use single quate to in evetn handler')">Another Click</button>
+        <button onclick="document.body.style.background= 'green'">red</button>
+
+        <!-- option Two -->
+        <button onclick="color()">yellow Function</button>
+
+        <!-- event handler tree -->
+        <button id="make-black">make black</button>
+
+        <button id="make-purple">make purple</button>
+        <!-- 4 -->
+        <button id="sky-color">sky</button>
+        <!-- 5 -->
+        <button id="blue">blue</button>
+        <!-- 6 -->
+        <button id="goldenrod">goldenRod</button>
+    </header>
+   
+    <!-- two -->
+    <script>
+        function color(){
+            document.body.style.backgroundColor = 'red';
+        } 
+    </script>
+    <!-- two -->
+    <script>
+        let makeBlack = document.getElementById('make-black');
+        makeBlack.onclick = black;
+        
+        function black(){
+            document.body.style.backgroundColor = 'black'
+        }
+    </script>
+    <!-- tree -->
+    <script>
+        let makePurple = document.getElementById('make-purple');
+        makePurple.onclick = function purple(){
+            document.body.style.backgroundColor = 'purple';
+        }
+    </script>
+    <!-- option 4 -->
+    
+    <script>
+        let skyColor = document.getElementById('sky-color');
+
+        skyColor.addEventListener('click', makeSky);
+        function makeSky(){
+            document.body.style.backgroundColor = 'skyblue';
+        }
+    </script>
+    <!-- 5 -->
+    <script>
+        let blueButton = document.getElementById('blue');
+        blueButton.addEventListener('click', function makeBlue(){
+            document.body.style.backgroundColor = 'blue'
+        });
+    </script>
+    <!-- 6 -->
+    <script>
+        document.getElementById('goldenrod').addEventListener('click', function(){
+            document.body.style.backgroundColor = 'goldenrod';
+        })
+    </script>
+</body>
+</html>

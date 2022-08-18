@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exploring JS DOM</h1>
+    <div>
+        <h2>D - Document</h2>
+        <h2>O - Object</h2>
+        <h2>M - Model</h2>
+    </div>
+
+    <script>
+        const tagName = document.getElementsByTagName('h2');
+        // apply loop - 1. for of  
+        /*for(const tag of tagName){
+            console.log(tag.innerText);
+        }
+        */
+       
+        // 2. for loop
+        for(let i = 0; i<tagName.length; i++){
+            let index = i;
+            let elements = tagName[i];
+            console.log(elements.innerText, index)
+        }
+        
+    </script>
+</body>
+</html>

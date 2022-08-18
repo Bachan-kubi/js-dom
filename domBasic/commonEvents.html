@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- option 1 -->
+    <h1>Final Dom Events handler</h1>
+    <h2 id="handler-status">Default Text</h2><br>
+    <p id="defalut-display">Defalutl input Text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">update</button><br><br>
+    <button onclick="handleOnClick()">Handle event by add onclick handler</button>
+    <!-- 2 -->
+    <h2 id="change-color">Change color</h2>
+    <button onclick="colorChange()">Ocean Blue</button>
+
+    <!-- option two -->
+
+    <button id="handle-event">handle event by addEvetnListener</button>
+
+
+    <script>
+        // 1
+        function handleOnClick(){
+            const handlerStutus = document.getElementById('handler-status');
+            handlerStutus.innerText= 'changing text on clicking button';
+        }
+        // 2
+        function colorChange(){
+            const changeColor = document.getElementById('change-color');
+            changeColor.style.color= 'red'
+        }
+        // option 2
+        
+            document.getElementById('handle-event').addEventListener('click', function(){
+                const eventHandler = document.getElementById('handler-status');
+                eventHandler.innerText = 'text added by event listern'
+            })
+        // recap
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const inputFeild= document.getElementById('input-field');
+            const inputText = inputFeild.value;
+
+            const p = document.getElementById('defalut-display');
+            p.innerText = inputText;
+            inputFeild.value = '';
+            
+        })
+    </script>
+
+</body>
+</html>

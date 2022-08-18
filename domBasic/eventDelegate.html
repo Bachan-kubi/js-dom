@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Explore Events Delegate</h2>
+    <section id="ul-container">
+        <ul id="list-container">
+            <li class="item">karbar ki</li>
+            <li class="item">marba naki</li>
+            <li class="item">korar ase ki</li>
+            <li class="item">dhorle jabe ki</li>
+            <li class="item">khus ki</li>
+            <li class="item">mon bvhalo ki</li>
+        </ul>
+    </section>
+    <button id="add">Add More</button>
+    
+    <script>
+        /*let items = document.getElementsByClassName('item')
+        for(let item of items){
+            item.addEventListener('click', function(event){
+                event.target.parentNode.removeChild(event.target);
+            });
+        }*/
+        document.getElementById('list-container').addEventListener('click', function(event){
+            console.log(event.target);
+            event.target.parentNode.removeChild(event.target);
+        });
+
+
+        document.getElementById('add').addEventListener('click', function(){
+            const li = document.createElement('li');
+            const ulContainer = document.getElementById('list-container');
+            li.innerText = 'brand new added'
+            li.classList.add('item');
+            ulContainer.appendChild(li);
+        })
+    </script>
+</body>
+</html>
