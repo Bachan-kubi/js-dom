@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamar Bank</title>
+    <style>
+        .flex-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 50%;
+            margin: 20px auto;
+        }
+        .flex{
+            background-color: rgb(202, 166, 166);
+            padding: 10px 20px;
+            margin: 20px;
+            width: 33.33%;
+        }
+        .input-container{
+            text-align: center;
+            padding: 10px;
+            margin-left: 80px;
+            background-color: coral;
+            border-radius: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <section class="flex-container">
+            <div class="flex">
+                <h2>Deposit</h2>
+                <h2>taka: <span>00</span></h2>
+            </div>
+            <div class="flex">
+                <h2>Deposit</h2>
+                <h2>taka: <span>00</span></h2>
+            </div>
+            <div class="flex">
+                <h2>Deposit</h2>
+                <h2>taka: <span>00</span></h2>
+            </div>
+        </section>
+
+        <section class="flex-container" >
+            <div class="input-container">
+                <h2>Please Deposit</h2>
+                <input type="text" id="deposit-input"><br><br>
+                <button id="btn-deposit">Deposit</button>
+            </div>
+            <div class="input-container">
+                <h2>Please Withdraw</h2>
+                <input type="text" id="withdraw-input"><br><br>
+                <button id="btn-withdraw">Withdraw</button>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>
