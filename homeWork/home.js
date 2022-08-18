@@ -9,6 +9,6 @@ document.getElementById('btn-triple').addEventListener('click', function(){
     const inputValue = getInputValue('input-feild');
     const tripleResult = inputValue * 3;
     setDisplay('display-field', tripleResult);
-})
+});
 
 greet();
