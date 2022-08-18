@@ -1,4 +1,4 @@
-
+// factory 
 document.getElementById('btn-double').addEventListener('click', function(){
     // fucntion for double result 
     const inputValue = getInputValue('input-feild');
